@@ -9,11 +9,11 @@
  *                 else out does not change (out[t+1] = out[t])
  */
 
-CHIP Bit {
-    IN in, load;
-    OUT out;
+CHIP Reg32bit {
+    IN in[32], load;
+    OUT out[32];
 
     PARTS:
-    Mux(a=dout,b=in,sel=load,out=out1);
-    DFF(in=out1,out=dout,out=out);
+    Register(in=in[0..15],load=load,out=out[0..15]);
+    Register(in=in[16..31],load=load,out=out[16..31]);
 }

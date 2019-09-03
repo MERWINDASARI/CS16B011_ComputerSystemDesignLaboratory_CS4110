@@ -14,5 +14,6 @@ CHIP Register {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Reg8Bit(in[0..7]=in[0..7],load=load,out[0..7]=out[0..7]);
+    Reg8Bit(in[0..7]=in[8..15],load=load,out[0..7]=out[8..15]);
 }

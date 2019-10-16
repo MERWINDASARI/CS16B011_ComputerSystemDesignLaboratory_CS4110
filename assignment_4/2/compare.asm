@@ -1,0 +1,30 @@
+@0
+D=M
+@1
+D=D-M
+@GT
+D;JGT
+@LT
+D;JLT
+@ET
+D;JEQ
+(ET)
+ @0
+ D=A
+ @END
+ 0;JMP
+(LT)
+ @2
+ D=A
+ @END
+ 0;JMP
+(GT)
+ @1
+ D=A
+ @END
+ 0;JMP
+(END)
+@2
+M=D
+@24
+0;JMP

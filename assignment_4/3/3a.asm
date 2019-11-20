@@ -1,4 +1,4 @@
-//Array pointer is stored in R0 and end of array is assumed as 0
+//Array pointer is stored in R0 and end of array is assumed as 0 length is stored in R17
 
 @R0
 D=M
